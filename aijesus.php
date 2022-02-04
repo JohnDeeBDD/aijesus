@@ -42,18 +42,3 @@ function w4dev_login_headerurl() {
 }
 add_filter( 'login_headerurl', 'w4dev_login_headerurl');
 
-
-function w4dev_login_url( $force_reauth, $redirect ) {
-    $login_url = 'jim';
-
-    if ( ! empty( $redirect ) ) {
-        $login_url = add_query_arg( 'redirect_to', urlencode( $redirect ), $login_url );
-    }
-
-    if ( $force_reauth ) {
-        $login_url = add_query_arg( 'reauth', '1', $login_url ) ;
-    }
-
-    return $login_url ;
-}
-add_filter( 'login_url', 'w4dev_login_url', 10, 2 );
