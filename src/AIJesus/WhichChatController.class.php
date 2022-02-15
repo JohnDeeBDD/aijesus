@@ -16,7 +16,10 @@ class WhichChatController{
         if($page == null){
             $my_post = array(
                 'post_title'    => $userName,
-                'post_content'  => "Welcome to chat",
+                'post_content'  => '&nbsp;
+<br />
+<br />
+<img src="https://aijes.us/wp-content/uploads/pantocrator2.jpg" alt="" width="604" height="599" class="aligncenter size-full wp-image-56" />',
                 'post_status'   => 'publish',
                 'post_type'     => 'chat',
                 );
